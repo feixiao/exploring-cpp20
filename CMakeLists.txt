@@ -17,9 +17,10 @@ endif()
 set(MODULES "No" CACHE STRING
 	"Set to TRUE or YES to compile using modules and import declarations. FALSE or NO compiles using #include directives.")
 
-# Many of the listings and snippets have tests that are independent
+# Many of the listi ngs and snippets have tests that are independent
 # of the book. The tests are my way to help ensure that the
 # code is more or less correct.
+# 使用 enable_testing() 命令可以启用测试。一定要在根目录下的CMakeLists.txt中开启，不然执行make test时会报错。
 enable_testing()
 
 set(CMAKE_CXX_STANDARD 20)
@@ -43,7 +44,7 @@ if (MSVC)
 else()
     # Maximum warnings and treat all warnings as errors
     # Adhere strictly to language standards.
-    add_compile_options(-Wall -Wextra -pedantic -Werror)
+    add_compile_options(-Wall -Wextra -pedantic -Werror -pedantic -std=c++20 -Werror=array-compare)
     if (MODULES)
 		add_compile_options("$<$<CXX_COMPILER_ID:GNU>:-fmodules-ts")
 		add_compile_options("$<$<CXX_COMPILER_ID:Clang>:-fmodules>")

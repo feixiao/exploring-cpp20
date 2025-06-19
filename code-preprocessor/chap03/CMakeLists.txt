@@ -1,5 +1,6 @@
 example(list0301)
 example(list0302)
+example(list0303)
 example(list0305)
 example(snip0306 snip0306.hh)
 example(snip0307 snip0307.hh)
