@@ -6,6 +6,9 @@
 #include <iostream>
 #include <iterator>
 #include <system_error>
+#include <algorithm>
+#include <ranges>
+
 
 int main()
 {
