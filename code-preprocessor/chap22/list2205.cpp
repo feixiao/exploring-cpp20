@@ -33,6 +33,7 @@ char lowercase(char ch)
  */
 bool is_palindrome(std::string_view str)
 {
+  // C++17中我们可以使用std::string_view来获取一个字符串的视图，字符串视图并不真正的创建或者拷贝字符串，而只是拥有一个字符串的查看功能
   auto letters_only{ str | std::views::filter(letter) };
   auto lowercased{ letters_only | std::views::transform(lowercase) };
   auto reversed{ lowercased | std::views::reverse };
