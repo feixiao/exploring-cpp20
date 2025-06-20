@@ -12,6 +12,9 @@ int main()
   // Read words from the standard input and count the number of times
   // each word occurs.
   std::string word{};
+
+  // 怎么退出 std::cin 读取内容？
+  
   while (std::cin >> word)
     ++counts[word];
 

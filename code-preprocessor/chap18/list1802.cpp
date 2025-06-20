@@ -18,6 +18,7 @@ int main()
     // Make a copy of word, keeping only alphabetic characters.
     std::string copy{};
     for (char ch : word)
+      // std::isalnum<char> 是一个内联函数模板，用于检查给定字符是否为字母或数字。它通过使用指定的 std::locale 和 ctype facet 来执行检查
       if (std::isalnum(ch, std::locale{""}))
         copy.push_back(ch);
     // The "word" might be all punctuation, so the copy would be empty.
@@ -26,7 +27,7 @@ int main()
       ++counts[copy];
   }
 
-  // For each word/count pair, print the word & count on one line.
+  // For each word/count pair, print the word & count on one line.523175
   for (auto pair : counts)
     std::cout << pair.first << '\t' << pair.second << '\n';
 }
