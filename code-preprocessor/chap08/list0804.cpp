@@ -7,7 +7,7 @@ int main()
 {
   using namespace std;
   cout << '|' << setfill('*') << setw(6) <<  1234 << '|' << '\n';
-  cout << '|' << left <<         setw(6) <<  1234 << '|' << '\n';
-  cout << '|' <<                 setw(6) << -1234 << '|' << '\n';
-  cout << '|' << right <<        setw(6) << -1234 << '|' << '\n';
+  cout << '|' << left <<         setw(6) <<  1234 << '|' << '\n';  // 填充字符在右边
+  cout << '|' <<                 setw(6) << -1234 << '|' << '\n';  // 延续之前的风格
+  cout << '|' << right <<        setw(6) << -1234 << '|' << '\n';  // 填充字符在左边
 }

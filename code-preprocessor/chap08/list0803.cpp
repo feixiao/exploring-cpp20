@@ -15,7 +15,7 @@ int main()
 
   // Print date in USA order. Later in the book, you will learn how to
   // handle internationalization.
-  cout << "Date: " << setfill('0') << setw(2) << month
+  cout << "Date: " << setfill('0') << setw(2) << month   // 使用0填充不满的位置
                             << '/' << setw(2) << day
                             << '/' << setw(2) << year << '\n';
   cout << "Pay to the order of: CASH\n";
