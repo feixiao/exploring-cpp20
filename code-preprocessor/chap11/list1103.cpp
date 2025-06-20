@@ -12,6 +12,10 @@ int main()
   std::ranges::copy(std::ranges::istream_view<int>(std::cin),
                     std::back_inserter(data));
 
+  // Reverse the order of the elements in the vector.
+  // This uses a two-iterator approach to swap elements from the start and end
+  // of the vector until they meet in the middle.
+  // The first iterator starts at the beginning of the vector, and the second
   for (auto start{data.begin()}, end{data.end()}; start != end; /*empty*/)
   {
     --end;
