@@ -25,7 +25,10 @@ void print(long long value)
 
 int main()
 {
-  std::cout.imbue(std::locale{""});
+  // Set the locale to the user's default locale
+  // This allows the program to handle locale-specific formatting
+  // such as thousands separators and decimal points.
+  std::cout.imbue(std::locale{""}); 
   print(0);
   print(0L);
   print(32768);

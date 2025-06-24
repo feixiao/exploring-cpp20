@@ -6,6 +6,7 @@
 int main()
 {
   std::cout << "bits per int = ";
+  // 判断是否带符号
   if (std::numeric_limits<int>::is_signed)
     std::cout << std::numeric_limits<int>::digits + 1 << '\n';
   else

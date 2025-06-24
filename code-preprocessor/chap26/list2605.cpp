@@ -2,7 +2,8 @@
 /** Listing 26-5. User-Defined Literal */
 #include <iostream>
 
-short operator "" _S(unsigned long long value)
+// User-defined literal for short type
+constexpr short operator "" _S(unsigned long long value)
 {
     return static_cast<short>(value);
 }
