@@ -51,6 +51,7 @@ private:
   int value_;
 };
 
+// 定义 << 
 std::ostream& operator<<(std::ostream& out, bmi x)
 {
   return out << x.value();
